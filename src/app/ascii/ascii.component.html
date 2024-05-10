@@ -23,6 +23,26 @@
         <button type="button" class="btn btn-primary" style="margin-right: 10px;">
             <a href="/ascii" style="color: white;">ASCII</a>
         </button>
+        <h2 style="margin-top: 20px;">Generar tabla de caracteres ASCII</h2>
+        <button type="button" class="btn btn-primary" (click)="generarLista()">Generar</button>
+        @if(mostrarTabla) {
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Código</th>
+                    <th scope="col">Caracter</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    @for (item of lista; track $index) {
+                        <tr>
+                            <td>{{item.codigo}}</td>
+                            <td>{{item.caracter}}</td>
+                          </tr>
+                    }
+                </tbody>
+              </table>
+        }
     </div>
 </body>
 </html>
