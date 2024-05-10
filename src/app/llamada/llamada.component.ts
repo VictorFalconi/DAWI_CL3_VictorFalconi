@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './llamada.component.scss'
 })
 export class LlamadaComponent {
-
+  
 }
