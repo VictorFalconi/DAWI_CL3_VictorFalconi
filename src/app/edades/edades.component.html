@@ -23,6 +23,21 @@
         <button type="button" class="btn btn-primary" style="margin-right: 10px;">
             <a href="/ascii" style="color: white;">ASCII</a>
         </button>
+        <h2 style="margin-top: 20px;">Ingrese las edades de los hermanos</h2>
+            <div class="mb-3" style="margin-top: 20px;">
+                <label for="exampleInputEmail1" class="form-label">Edad 1</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" [(ngModel)]="edades.edad1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Edad 2</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" [(ngModel)]="edades.edad2">
+            </div>
+            <button type="button" class="btn btn-primary" (click)="calcularResultado()">Calcular</button>
+            @if (mostrarMensaje) {
+                <div class="alert alert-primary" role="alert" style="margin-top: 20px;">
+                    {{edades.resultado}}
+                </div>
+            }
     </div>
 </body>
 </html>
