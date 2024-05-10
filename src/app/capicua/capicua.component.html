@@ -23,6 +23,17 @@
         <button type="button" class="btn btn-primary" style="margin-right: 10px;">
             <a href="/ascii" style="color: white;">ASCII</a>
         </button>
+        <h2 style="margin-top: 20px;">Ingrese el número a consultar</h2>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Numero</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" [(ngModel)]="capicua.numero">
+        </div>
+        <button type="button" class="btn btn-primary" (click)="calcularCapicua()">Calcular</button>
+        @if(mostrarResultado) {
+            <div class="alert alert-primary" role="alert" style="margin-top: 20px;">
+                {{capicua.resultado}}
+            </div>
+        }
     </div>
 </body>
 </html>
