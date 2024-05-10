@@ -23,6 +23,17 @@
         <button type="button" class="btn btn-primary" style="margin-right: 10px;">
             <a href="/ascii" style="color: white;">ASCII</a>
         </button>
+        <h2 style="margin-top: 20px;">Ingrese la cantidad de minutos consumidos</h2>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Minutos</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" [(ngModel)]="llamada.minutos">
+        </div>
+        <button type="button" class="btn btn-primary" (click)="calcularPago()">Calcular</button>
+        @if(mostrarMensaje) {
+            <div class="alert alert-primary" role="alert" style="margin-top: 20px;">
+                {{llamada.resultado}}
+            </div>
+        }
     </div>
 </body>
 </html>
